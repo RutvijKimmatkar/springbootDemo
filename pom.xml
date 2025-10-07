@@ -10,12 +10,12 @@
     <artifactId>civic-complaints</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-amew
+
     <name>civic-complaints</name>
     <description>Civic Complaints Portal</description>
 
     <parent>
-        <groupId>org.springfrork.boot</groupId>
+        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.4</version>
         <relativePath/> <!-- lookup parent from repository -->
@@ -46,6 +46,12 @@ amew
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Spring Security (if you use AuthenticationManager / filters) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- Security Crypto (for BCryptPasswordEncoder) -->
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -65,7 +71,10 @@ amew
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
